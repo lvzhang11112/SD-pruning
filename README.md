@@ -2,12 +2,7 @@
 <div align="center">
 <img src="assets/framework.png" width="80%"></img>
 </div>
-## Introduction
-> **Structural Pruning for Diffusion Models** [[arxiv]](https://arxiv.org/abs/2305.10924)  
-> *[Gongfan Fang](https://fangggf.github.io/), [Xinyin Ma](https://horseee.github.io/), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)*    
-> *National University of Singapore*
-
-This work presents *Diff-Pruning*, an efficient structrual pruning method for diffusion models. Our empirical assessment highlights two primary features:
+This work presents *Slide-Pruning*, an efficient structrual pruning method for diffusion models. Our empirical assessment highlights two primary features:
 1) ``Efficiency``: It enables approximately a 50% reduction in FLOPs at a mere 10% to 20% of the original training expenditure; 
 2) ``Consistency``: The pruned diffusion models inherently preserve generative behavior congruent with the pre-trained ones.
 
