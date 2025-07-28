@@ -47,10 +47,17 @@ python tools/extract_cifar10.py --output data
 * Pretrained Models
    You can also download a pre-converted model using wget
 ```bash
-wget https://github.com/VainF/Diff-Pruning/releases/download/v0.0.1/ddpm_ema_cifar10.zip
-
+wget https://github.com/lvzhang11112/Slide-pruning/releases/download/Modles/ddpm_ema_cifar10.zip
+wget https://github.com/lvzhang11112/Slide-pruning/releases/download/Modles/ddpm-ema-bedroom.zip
+wget https://github.com/lvzhang11112/Slide-pruning/releases/download/Modles/ddpm-ema-church.zip
 ```
-
+* Pruned Models
+   You can also download a pruned model using wget
+```bash
+wget https://github.com/lvzhang11112/Slide-pruning/releases/download/Modles/ddpm_cifar10_pruned.zip
+wget https://github.com/lvzhang11112/Slide-pruning/releases/download/Modles/ddpm_ema_bedroom_256_pruned.zip
+wget https://github.com/lvzhang11112/Slide-pruning/releases/download/Modles/ddpm_ema_church_256_pruned.zip
+```
 ### 1. Pruning
 Create a pruned model at *run/pruned/ddpm_cifar10_pruned*
 ```bash
