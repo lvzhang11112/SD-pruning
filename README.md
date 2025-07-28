@@ -112,44 +112,12 @@ python ddpm_prune.py \
 --model_path google/ddpm-ema-bedroom-256 \
 --save_path run/pruned/ddpm_ema_bedroom_256_pruned \
 --pruning_ratio 0.05 \
---pruner "<random|magnitude|reinit|taylor|diff-pruning>" \
+--pruner "<random|magnitude|reinit|taylor|slide-pruning|diff-pruning>" \
 --batch_size 4 \
 --thr 0.05 \
 --device cuda:0 \
 ```
-The ``dataset`` and ``thr`` arguments only work for taylor & diff-pruning.
-
-
-### :rocket: [Latent Diffusion Models (LDMs)](https://arxiv.org/abs/2112.10752)
-Example: [CompVis/ldm-celebahq-256](https://huggingface.co/CompVis/ldm-celebahq-256)
-```bash
-python ldm_prune.py \
---model_path CompVis/ldm-celebahq-256 \
---save_path run/pruned/ldm_celeba_pruned \
---pruning_ratio 0.05 \
---pruner "<random|magnitude|reinit>" \
---device cuda:0 \
---batch_size 4 \
-```
-
-## Results
-
-* **DDPM on Cifar-10, CelebA and LSUN**
-
-<div align="center">
-<img src="assets/exp.png" width="75%"></img>
-<img src="https://github.com/VainF/Diff-Pruning/assets/18592211/39b3a7ad-2abb-4934-9ee0-07724029660b" width="75%"></img>
-</div>
-
-* **Conditional LDM on ImageNet-1K 256**
-
-We also have some results on Conditional LDM for ImageNet-1K 256x256, where we finetune a pruned LDM for only 4 epochs. Will release the training script soon.
-
-<div align="center">
-<img src="https://github.com/VainF/Diff-Pruning/assets/18592211/31dbf489-2ca2-4625-ba54-5a5ff4e4a626" width="75%"></img>
-<img src="https://github.com/VainF/Diff-Pruning/assets/18592211/20d546c5-9012-4ba9-80b2-96ed29da7d07" width="85%"></img>
-</div>
-
+The ``dataset`` and ``thr`` arguments only work for taylor & diff-pruning & slide-pruning.
 
 ## Acknowledgement
 
