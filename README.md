@@ -19,12 +19,11 @@ This work presents *Diff-Pruning*, an efficient structrual pruning method for di
 - [x] Magnitude Pruning
 - [x] Random Pruning
 - [x] Taylor Pruning
-- [x] Diff-Pruning (A taylor-based method proposed in our paper)   
-
+- [x] Diff-Pruning   
+- [x] Slide-Pruning (A taylor-based method proposed in our paper)  
 ### TODO List
 - [ ] Support more diffusion models from Diffusers
-- [ ] Upload checkpoints of pruned models
-- [ ] Training scripts for CelebA-HQ, LSUN Church & LSUN Bedroom
+- [ ] Training scripts for  LSUN Church & LSUN Bedroom
 - [ ] Align the performance with the [DDIM Repo](https://github.com/ermongroup/ddim). 
 
 ## Pruning with Huggingface Diffusers
@@ -32,12 +31,10 @@ This work presents *Diff-Pruning*, an efficient structrual pruning method for di
 The following pipeline prunes a pre-trained DDPM on CIFAR-10 with [Huggingface Diffusers](https://github.com/huggingface/diffusers).
 
 ### 0. Environment, Data and Pretrained Model
-
 * Requirements
 ```bash
 conda env create -f environment.yaml
 ```
- 
 * Data
   
 Download and extract CIFAR-10 images to *data/cifar10_images* for training and evaluation.
