@@ -1,13 +1,7 @@
-# Diff-Pruning: Structural Pruning for Diffusion Models
-
+# Slide-Pruning:Representation-Aware Timestep Pruning for Efficient Diffusion Models
 <div align="center">
 <img src="assets/framework.png" width="80%"></img>
 </div>
-
-## Update
-Check our latest work [DeepCache](https://horseee.github.io/Diffusion_DeepCache/), a **training-free and almost loessless** method for diffusion model acceleration. It can be viewed as a special pruning technique that dynamically drops deep layers and only runs shallow ones during inference.
-
-
 ## Introduction
 > **Structural Pruning for Diffusion Models** [[arxiv]](https://arxiv.org/abs/2305.10924)  
 > *[Gongfan Fang](https://fangggf.github.io/), [Xinyin Ma](https://horseee.github.io/), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)*    
@@ -185,23 +179,4 @@ We also have some results on Conditional LDM for ImageNet-1K 256x256, where we f
 
 This project is heavily based on [Diffusers](https://github.com/huggingface/diffusers), [Torch-Pruning](https://github.com/VainF/Torch-Pruning), [pytorch-fid](https://github.com/mseitzer/pytorch-fid). Our experiments were conducted on [ddim](https://github.com/ermongroup/ddim) and [LDM](https://github.com/CompVis/latent-diffusion).
 
-## Citation
-If you find this work helpful, please cite:
-```
-@inproceedings{fang2023structural,
-  title={Structural pruning for diffusion models},
-  author={Gongfan Fang and Xinyin Ma and Xinchao Wang},
-  booktitle={Advances in Neural Information Processing Systems},
-  year={2023},
-}
-```
 
-```
-@inproceedings{fang2023depgraph,
-  title={Depgraph: Towards any structural pruning},
-  author={Fang, Gongfan and Ma, Xinyin and Song, Mingli and Mi, Michael Bi and Wang, Xinchao},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={16091--16101},
-  year={2023}
-}
-```
