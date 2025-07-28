@@ -27,32 +27,6 @@ This work presents *Diff-Pruning*, an efficient structrual pruning method for di
 - [ ] Training scripts for CelebA-HQ, LSUN Church & LSUN Bedroom
 - [ ] Align the performance with the [DDIM Repo](https://github.com/ermongroup/ddim). 
 
-## Our Exp Code (Unorganized)
-
-### Pruning with DDIM codebase
-This example shows how to prune a DDPM model pre-trained on CIFAR-10 using the [DDIM codebase](https://github.com/ermongroup/ddim). Since that [Huggingface Diffusers](https://github.com/huggingface/diffusers) do not support [``skip_type='quad'``](https://github.com/ermongroup/ddim/issues/3) in DDIM, you may get slightly worse FID scores with Diffusers for both pre-trained models (FID=4.5) and pruned models (FID=5.6). We are working on this to implement the quad strategy for Diffusers. For reproducibility, we provide our original **but unorganized** exp code for the paper in [ddpm_exp](ddpm_exp). 
-
-```bash
-cd ddpm_exp
-# Prune & Finetune
-bash scripts/simple_cifar_our.sh 0.05 # the pre-trained model and data will be automatically prepared
-# Sampling
-bash scripts/sample_cifar_ddpm_pruning.sh run/finetune_simple_v2/cifar10_ours_T=0.05.pth/logs/post_training/ckpt_100000.pth run/sample
-```
-
-For FID, please refer to [this section](https://github.com/VainF/Diff-Pruning#4-fid-score).  
-
-Output:
-```
-Found 49984 files.
-100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 391/391 [00:49<00:00,  7.97it/s]
-FID:  5.242662673752534
-```
-
-### Pruning with LDM codebase
-
-Please check [ldm_exp/run.sh](ldm_exp/run.sh) for an example of pruning a pre-trained LDM model on ImageNet. This codebase is still unorganized. We will clean it up in the future.
-
 ## Pruning with Huggingface Diffusers
 
 The following pipeline prunes a pre-trained DDPM on CIFAR-10 with [Huggingface Diffusers](https://github.com/huggingface/diffusers).
@@ -71,15 +45,10 @@ Download and extract CIFAR-10 images to *data/cifar10_images* for training and e
 python tools/extract_cifar10.py --output data
 ```
 * Pretrained Models
-  
-The following script will download an official DDPM model and convert it to the format of Huggingface Diffusers. You can find the converted model at *pretrained/ddpm_ema_cifar10*. It is an EMA version of [google/ddpm-cifar10-32](https://huggingface.co/google/ddpm-cifar10-32)
-```bash
-bash tools/convert_cifar10_ddpm_ema.sh
-```
-
-(Optional) You can also download a pre-converted model using wget
+   You can also download a pre-converted model using wget
 ```bash
 wget https://github.com/VainF/Diff-Pruning/releases/download/v0.0.1/ddpm_ema_cifar10.zip
+
 ```
 
 ### 1. Pruning
