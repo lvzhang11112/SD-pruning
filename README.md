@@ -57,11 +57,11 @@ Please check [ldm_exp/run.sh](ldm_exp/run.sh) for an example of pruning a pre-tr
 
 The following pipeline prunes a pre-trained DDPM on CIFAR-10 with [Huggingface Diffusers](https://github.com/huggingface/diffusers).
 
-### 0. Requirements, Data and Pretrained Model
+### 0. Environment, Data and Pretrained Model
 
 * Requirements
 ```bash
-pip install -r requirements.txt
+conda env create -f environment.yaml
 ```
  
 * Data
