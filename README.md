@@ -2,7 +2,7 @@
 <div align="center">
 <img src="assets/framework.png" width="80%"></img>
 </div>
-This work presents *Slide-Pruning*, an efficient structrual pruning method for diffusion models. Our empirical assessment highlights two primary features:
+This work presents *ST-Pruning*, an efficient structrual pruning method for diffusion models. Our empirical assessment highlights two primary features:
 1) ``Efficiency``: It enables approximately a 50% reduction in FLOPs at a mere 10% to 20% of the original training expenditure; 
 2) ``Consistency``: The pruned diffusion models inherently preserve generative behavior congruent with the pre-trained ones.
 
@@ -15,7 +15,7 @@ This work presents *Slide-Pruning*, an efficient structrual pruning method for d
 - [x] Random Pruning
 - [x] Taylor Pruning
 - [x] Diff-Pruning   
-- [x] Slide-Pruning (A taylor-based method proposed in our paper)  
+- [x] ST-Pruning (A taylor-based method proposed in our paper)  
 ### TODO List
 - [ ] Support more diffusion models from Diffusers
 - [ ] Training scripts for  LSUN Church & LSUN Bedroom
