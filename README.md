@@ -1,4 +1,4 @@
-# Slide-Pruning:Representation-Aware Timestep Pruning for Efficient Diffusion Models
+# ST-Pruning:Representation-Aware Timestep Pruning for Efficient Diffusion Models
 <div align="center">
 <img src="assets/framework.png" width="80%"></img>
 </div>
